@@ -1,0 +1,19 @@
+{
+  "name": "hica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "compile-sass":"node-sass sass/style.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abitsalihu/hica.git"
+  },
+  "author": "abu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abitsalihu/hica/issues"
+  },
+  "homepage": "https://github.com/abitsalihu/hica#readme"
+}
