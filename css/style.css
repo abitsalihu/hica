@@ -128,7 +128,8 @@ body {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    border: 3px solid #ff9a8b; }
+    border: 3px solid #ff9a8b;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; }
     .event__container--info {
       height: 30%;
       border-radius: 10px 10px 0px 0px;
@@ -250,22 +251,25 @@ body {
   width: 100%;
   min-height: 200vh;
   background-color: #2e2e2e;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .story {
   width: 700px;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 4; }
   .story > p {
     margin-top: 50px;
     font-size: 2rem;
     font-weight: 600;
-    color: #f5f5f5; }
+    color: #f5f5f5;
+    position: relative; }
 
 .team {
   width: 100%;
@@ -275,8 +279,7 @@ body {
   text-align: center;
   margin-top: 150px; }
   .team__cards {
-    margin-top: 50px;
-    border: 1px solid red;
+    margin-top: 75px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -286,28 +289,63 @@ body {
     padding: 0px 100px; }
     .team__cards-con {
       width: 300px;
-      height: 400px;
-      border: 1px solid red;
+      height: 425px;
+      border-radius: 10px;
       position: relative;
       display: flex;
       flex-direction: column;
-      color: #f5f5f5; }
+      justify-content: space-between;
+      align-items: center;
+      color: #f5f5f5;
+      text-align: center; }
+      .team__cards-con-name {
+        position: relative;
+        z-index: 9999;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; }
+        .team__cards-con-name > svg {
+          width: 40px;
+          position: relative;
+          z-index: 10;
+          display: flex;
+          transition: all 2s ease;
+          cursor: pointer; }
+        .team__cards-con-name > h4 {
+          color: black;
+          font-weight: 300;
+          letter-spacing: 2.5px;
+          position: relative;
+          z-index: 5;
+          font-size: 2rem;
+          text-transform: uppercase; }
+      .team__cards-con > img {
+        border-radius: 10px;
+        position: relative;
+        z-index: 1; }
       .team__cards-con--overlay {
+        border-radius: 10px;
         position: absolute;
+        z-index: 2;
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, black 7.5%, transparent 80%); }
+        background: linear-gradient(0deg, #8ec5fc 15%, transparent 50%);
+        background: linear-gradient(0deg, #fe9a8b 12.5%, transparent 50%); }
 
 .title {
   font-size: 4rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  letter-spacing: 3px;
+  background-image: linear-gradient(62deg, #fbac7e 0%, #f7cf69 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent; }
+  .title:nth-child(1) {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
 
 .vibrant {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
@@ -321,3 +359,19 @@ body {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent; }
+
+#sw-js-blob-svg {
+  position: absolute;
+  z-index: 0;
+  width: 175px;
+  bottom: -50px;
+  left: -200px;
+  filter: blur(4px); }
+
+#sw-js-blob-svg-s {
+  position: absolute;
+  z-index: 0;
+  width: 175px;
+  top: 50px;
+  right: -200px;
+  filter: blur(4px); }
