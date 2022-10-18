@@ -71,12 +71,26 @@ body {
     display: flex; }
     .nav__logo > img {
       width: 100%; }
+  .nav__button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer; }
+    .nav__button-line {
+      width: 30px;
+      height: 2.5px;
+      background-color: #434343;
+      background-color: #f5f5f5; }
   .nav__links {
     width: 60%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
-    align-items: center; }
+    align-items: center;
+    display: none; }
     .nav__links--l, .nav__links--l:active, .nav__links:focus {
       font-size: 1.5rem;
       padding: 8px 25px;

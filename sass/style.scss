@@ -92,6 +92,27 @@ body {
     }
   }
 
+  &__button{
+    width: 40px;
+    height: 40px;
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+
+
+    &-line{
+      width: 30px;
+      height: 2.5px;
+      background-color: #434343;
+      background-color: $white-color;
+    }
+
+    
+  }
+
   &__links {
 
     width: 60%;
@@ -99,6 +120,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    display: none;
 
     &--l,
     &--l:active,
