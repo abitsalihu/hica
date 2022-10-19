@@ -44,7 +44,7 @@ subTitle.forEach(title => {
     observer.observe(title)
 })
 
-observer.observe(story);
+observer.observe(story, navigation, mainEvent );
 observer.observe(mainEvent)
 observer.observe(navigation)
 
