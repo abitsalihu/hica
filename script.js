@@ -5,15 +5,57 @@ const aboutBtn = document.querySelector(".about");
 const eventsBtn = document.querySelector(".events");
 
 
-const aboutSection = document.querySelectorAll(".title");
-const eventSection = document.querySelectorAll(".title")
+const theSections = document.querySelectorAll(".title");
+const subTitle = document.querySelectorAll(".sub-title")
+const story = document.querySelector(".story-p");
+const teamCards = document.querySelectorAll(".team__cards-con")
+const mainEvent = document.querySelector(".event")
+const navigation = document.querySelector(".nav")
+const eventCards = document.querySelectorAll(".third-section_upcoming-events-card")
+
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        if(entry.isIntersecting) observer.unobserve(entry.target)
+    })
+    console.log(entries)
+},{
+    threshold: .5,
+});
+
+
+
+theSections.forEach(theSections => {
+
+    observer.observe(theSections)
+})
+
+teamCards.forEach(cards => {
+    observer.observe(cards)
+})
+
+eventCards.forEach(card =>{
+    observer.observe(card)
+})
+
+subTitle.forEach(title => {
+    observer.observe(title)
+})
+
+observer.observe(story);
+observer.observe(mainEvent)
+observer.observe(navigation)
+
+
 
 
 aboutBtn.addEventListener("click", () => {
     console.log("clicked")
-    aboutSection[0].scrollIntoView({ behavior: 'smooth' });
+    theSections[0].scrollIntoView({ behavior: 'smooth' });
 })
 
 eventsBtn.addEventListener("click", () => {
-    eventSection[2].scrollIntoView({behavior:"smooth"})
+    theSections[2].scrollIntoView({behavior:"smooth"})
 })
