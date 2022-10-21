@@ -60,13 +60,14 @@ body {
 
 .first-section {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-
+  padding: 50px 0px;
+  gap: 60px;
   background-color: $landing-color;
 }
 
@@ -192,27 +193,24 @@ body {
 
 .event {
   width: 70%;
-  height: 60.5%;
+  padding: 40px;
+  // height: 60.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transform: translateX(50px);
   position: relative;
-  &-background{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 11;
-    box-shadow: 0 8px 32px 0 rgba(61, 64, 105, 0.25);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-  }
+  box-shadow: 0 8px 32px 0 rgba(61, 64, 105, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+
   &__container {
-    width: 92.5%;
-    height: 83.5%;
+    // width: 92.5%;
+    // height: 83.5%;
     border-radius: 10px;
     position: relative;
     z-index: 12;
@@ -225,13 +223,15 @@ body {
 
 
     &--info {
-      height: 30%;
+      height: 125px;
+      // height: 30%;
       border-radius: 10px 10px 0px 0px;
       display: flex;
       position: relative;
       z-index: 5;
 
       &_name {
+
         height: 100%;
         width: 65%;
         padding-left: 40px;
@@ -241,6 +241,7 @@ body {
         gap: 20px;
         position: relative;
         z-index: 5;
+
         &-img {
           width: 55px;
           height: 55px;
@@ -258,6 +259,7 @@ body {
         }
 
         &-instagram {
+          padding: 20px 0px;
           color: $white-color;
           font-weight: 800;
           font-size: 1.3rem;
@@ -276,7 +278,7 @@ body {
 
       &_id {
         width: 35%;
-        height: 80%;
+        // height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -291,11 +293,13 @@ body {
       }
 
       &_event{
-        height: 70%;
+
+        padding: 20px;
+        // height: 70%;
         display: flex;
 
         &-left{
-          padding-left: 40px;
+          padding-left: 20px;
           width: 50%;
 
           
@@ -329,12 +333,12 @@ body {
 
             &_second{
               font-size: 2.2rem;
-              color: red;
+
             }
 
             &_third{
               font-size: 1.9rem;
-              color: red;
+
             }
     
           }
@@ -352,6 +356,7 @@ body {
 
 
           &_content{
+
             padding: 0px 40px;
             color: $white-color;
             font-size: 1.5rem;
@@ -640,7 +645,6 @@ body {
             &-left{
               padding-left: 40px;
               width: 50%;
-              overflow: scroll;
               border-right: 1px solid #c4c3fb;
               display: flex;
               flex-direction: column;
@@ -667,7 +671,6 @@ body {
               display: flex;
               justify-content: center;
               align-items: center;
-              overflow: scroll;
     
               &_content{
                 padding: 0px 40px;
@@ -875,16 +878,19 @@ body {
 
 @media screen and (max-width:965px){
   .event {
-    min-height: 70.5%;
-    width: 90%;
+    width: 80%;
   
     &__container {
-          height: 90%;
+
+          gap: 10px;
   
       &--info {
         height: 20%;
-  
+
         &_name {
+
+          padding: 20px;
+          gap: 5px;
           &-instagram {
             & > h5 {
               font-size: 1.4rem;
@@ -896,26 +902,33 @@ body {
         }
   
         &_id {
-          font-size: 2rem;
+          padding-right: 10px;
+          font-size: 1.75rem;
+        clip-path: polygon(0 -1%, 103% -1%, 103% 85%, 27.5% 85%);         
+
         }
   
         &_event{
           height: 80%;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+
+          padding: 0px 10px;
+
   
           &-left{
-            padding-left: 0px;
-            padding: 40px;
+
+            padding: 10px 10px;
             width: 100%;
             height: 50%;
+            border: none;
             border-bottom: 1px solid #fe9a8b;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items:center;
             flex-wrap: wrap;
+
   
             &-h5{
               color: $white-color;
@@ -942,9 +955,11 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            border: none;
   
             &_content{
-              padding: 20px 40px;
+              padding: 20px 10px;
+
               font-size: 1.5rem;
             }
           }
@@ -1013,28 +1028,25 @@ body {
 
   .event {
     width: 95%;
-    transform: scale(.95);
   
     &__container {
+
       &--info {
         &_name {
-          width: 60%;
+          width: 55%;
         }
   
         &_id {
-          width: 40%;
+          width: 45%;
           font-size: 1.5rem;
-          padding-right: 10px;
         }
   
         &_event{
           &-left{
-            padding: 20px 40px 20px 40px;
           }
   
           &-right{
             &_content{
-              padding: 0px 40px 30px 40px;
             }
           }
         }
@@ -1111,10 +1123,6 @@ body {
       &--info {
         &_id {
           padding-right: 5px;
-
-          & > h4 {
-            margin-top: 22px;
-          }
         }
         &_name{
           padding-left: 20px;
@@ -1130,13 +1138,10 @@ body {
 
         &_event{
           &-left{
-            padding-left: 20px;
           }
   
           &-right{
             &_content{
-              padding-left: 20px;
-
               & > p {
                 font-size: 1.3rem;
               }
@@ -1167,12 +1172,7 @@ body {
               }
 
           &-right{
-            border-left: .5px solid #fe9a8b;
             width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: scroll;
   
             &_content{
               padding: 0px 10px;
@@ -1235,7 +1235,8 @@ body {
 
 @media screen and (max-width:415px) {
   .event {
-    width: 95%;
+    width: 97.5%;
+    padding: 12.5px;
 
     &__container {
       &--info {
@@ -1261,7 +1262,6 @@ body {
 
         &_event{
           &-left{
-            padding-left: 20px;
 
             &-h5{
               font-size: 1.1rem;
@@ -1281,7 +1281,6 @@ body {
           }
           &-right{
             &_content{
-            padding-left: 20px;
 
               & > p {
                 font-size: 1.1rem;
@@ -1319,59 +1318,35 @@ body {
 }
 
 @media screen and (max-width:324px) {
-  .event {
-    width: 95%;
-    height: 80%;
-  
-    &__container {
-      &--info {
-        &_id {
-          padding-right: 5px;
+  .third-section{
+    &_upcoming{
+      &-events{
+        display: block;
 
-          & > h4 {
-            margin-top: 22px;
-          }
-        }
-        &_name{
-          padding-left: 20px;
-          gap: 10px;
+        &-card{
+          width: 100%;
+          height: 355px;
 
-          &-instagram{
-
-          & > h3 {
-            display: none;
-          }
-        }
-        }
-
-        &_event{
-          &-left{
-            overflow: hidden;
-
-            &-h2{
-              &_first{
-                font-size: 1.7rem;
-              }
-              &_second{
-                font-ssze: 1.5rem;
-              }
-              &_first{
-                font-size: 1.3rem;
-              }
+          &--info{
+            &_id{
+              font-size: 1rem;
+              padding-right: 5px;
             }
-          }
-  
+
+            &_event{
+             
+
           &-right{
-            overflow: hidden;
+  
             &_content{
-
-              & > p {
-                font-size: 1.2rem;
-              }
-            }
+              padding: 0px 10px;
+              font-size: .9rem;
           }
+         }
         }
+       }
       }
+     }
     }
   }
 }
