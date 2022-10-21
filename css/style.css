@@ -384,11 +384,14 @@ body {
       align-items: center;
       gap: 40px;
       flex-wrap: wrap;
-      width: 100%; }
+      width: 100%;
+      position: relative; }
       .third-section_upcoming-events-card {
         margin: 50px 0px;
         width: 550px;
         height: 300px;
+        position: relative;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -461,7 +464,9 @@ body {
               flex-direction: column;
               gap: 20px;
               justify-content: center;
-              align-items: flex-start; }
+              align-items: flex-start;
+              position: relative;
+              z-index: 5; }
               .third-section_upcoming-events-card--info_event-left-h5 {
                 text-transform: uppercase;
                 font-size: 1rem;
@@ -471,11 +476,12 @@ body {
                 text-transform: uppercase;
                 font-size: 1.25rem; }
             .third-section_upcoming-events-card--info_event-right {
-              border-left: .5px solid #fe9a8b;
               width: 50%;
               display: flex;
               justify-content: center;
-              align-items: center; }
+              align-items: center;
+              position: relative;
+              z-index: 5; }
               .third-section_upcoming-events-card--info_event-right_content {
                 padding: 0px 40px;
                 font-size: 1rem; }
@@ -589,6 +595,18 @@ body {
 
 .p-card {
   background: #434343; }
+
+.event-blob {
+  position: absolute;
+  width: 120px;
+  bottom: 0px;
+  right: -20px;
+  z-index: 1;
+  filter: blur(2px); }
+  .event-blob:nth-child(2) {
+    width: 110px;
+    left: -37.5px;
+    bottom: -25px; }
 
 .p-instagram {
   color: #f5f5f5; }
