@@ -1081,13 +1081,21 @@ body {
 
 
 @media screen and (max-width:840px) {
-  .nav {  
+
+  .nav { 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    height: 20%;
     &__button{
-      display: flex;  
+      // display: flex;  
     }
   
     &__links {
-      display: none;
+      // display: none;
+      justify-content: center;
     }
   }
   .story{
@@ -1233,7 +1241,7 @@ body {
   .first-section{
     padding-top: 25px;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 25px;
   }
   .event {
     width: 95%;
@@ -1366,7 +1374,21 @@ body {
   
 }
 
+@media screen and (max-width:450px) {
 
+  .nav { 
+    &__links {
+      &--l {
+        font-size: 1.2rem;
+
+        &:nth-child(2){
+          margin: 15px;
+        }
+      }
+    }
+  }
+  
+}
 
 @media screen and (max-width:415px) {
   .event {
@@ -1454,4 +1476,19 @@ body {
     }
   }
 
+}
+
+@media screen and (max-width:360px) {
+
+  .nav { 
+    &__links {
+      &--l {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+
+      
+      }
+    }
+  }
+  
 }
