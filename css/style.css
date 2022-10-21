@@ -69,8 +69,8 @@ body {
   transform: translateY(-60px);
   opacity: 0; }
   .nav__logo {
-    height: 100%;
     width: 140px;
+    height: 100%;
     display: flex; }
     .nav__logo > img {
       width: 100%; }
@@ -616,6 +616,9 @@ body {
   opacity: 1;
   transform: translate(0px);
   transition: all 1s ease; }
+
+.title-img {
+  display: inline-block; }
 
 @media screen and (max-width: 965px) {
   .event {

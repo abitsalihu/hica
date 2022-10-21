@@ -84,8 +84,8 @@ body {
 
   &__logo {
 
-    height: 100%;
     width: 140px;
+    height: 100%;
 
     display: flex;
 
@@ -875,6 +875,9 @@ body {
   transition: all 1s ease;
 }
 
+.title-img{
+  display: inline-block;
+}
 
 @media screen and (max-width:965px){
   .event {
