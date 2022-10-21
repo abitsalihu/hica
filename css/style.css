@@ -843,3 +843,29 @@ body {
   .nav__links--l {
     font-size: 1.1rem;
     padding: 8px 15px; } }
+
+@media screen and (max-width: 324px) {
+  .event {
+    width: 95%;
+    height: 80%; }
+    .event__container--info_id {
+      padding-right: 5px; }
+      .event__container--info_id > h4 {
+        margin-top: 22px; }
+    .event__container--info_name {
+      padding-left: 20px;
+      gap: 10px; }
+      .event__container--info_name-instagram > h3 {
+        display: none; }
+    .event__container--info_event-left {
+      overflow: hidden; }
+      .event__container--info_event-left-h2_first {
+        font-size: 1.7rem; }
+      .event__container--info_event-left-h2_second {
+        font-ssze: 1.5rem; }
+      .event__container--info_event-left-h2_first {
+        font-size: 1.3rem; }
+    .event__container--info_event-right {
+      overflow: hidden; }
+      .event__container--info_event-right_content > p {
+        font-size: 1.2rem; } }
