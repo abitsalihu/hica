@@ -43,6 +43,9 @@ h6 {
 #__next {
   isolation: isolate; }
 
+link {
+  display: inline-block; }
+
 body {
   font-family: sans-serif;
   font-family: "Raleway", sans-serif;
@@ -616,9 +619,6 @@ body {
   opacity: 1;
   transform: translate(0px);
   transition: all 1s ease; }
-
-.title-img {
-  display: inline-block; }
 
 @media screen and (max-width: 965px) {
   .event {
