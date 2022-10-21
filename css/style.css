@@ -324,7 +324,7 @@ body {
     gap: 30px;
     padding: 0px 100px; }
     .team__cards-con {
-      width: 300px;
+      min-width: 300px;
       height: 425px;
       border-radius: 10px;
       position: relative;
@@ -699,7 +699,9 @@ body {
   #sw-js-blob-svg-s {
     right: -75px;
     top: 150px;
-    width: 100px; } }
+    width: 100px; }
+  .blob:nth-child(3) {
+    left: 550px; } }
 
 @media screen and (max-width: 657px) {
   .nav {
@@ -721,7 +723,12 @@ body {
     .event__container--info_event-right_content {
       padding: 0px 40px 30px 40px; }
   .story > p {
-    font-size: 1.75rem; } }
+    font-size: 1.75rem; }
+  .blob:nth-child(4) {
+    left: 300px;
+    top: 100px; }
+  .blob:nth-child(3) {
+    left: 450px; } }
 
 @media screen and (max-width: 590px) {
   .third-section_upcoming-events-card {
@@ -733,19 +740,37 @@ body {
       font-size: 1.3rem; } }
 
 @media screen and (max-width: 500px) {
+  .first-section {
+    padding-top: 25px;
+    justify-content: flex-start;
+    gap: 15px; }
   .event {
-    width: 95%; }
-    .event__container--info_event-right_content > p {
-      font-size: 1.3rem; }
+    width: 95%;
+    height: 70%; }
+    .event__container--info_id {
+      padding-right: 5px; }
+      .event__container--info_id > h4 {
+        margin-top: 22px; }
+    .event__container--info_name {
+      padding-left: 20px;
+      gap: 10px; }
+      .event__container--info_name-instagram > h3 {
+        display: none; }
+    .event__container--info_event-left {
+      padding-left: 20px; }
+    .event__container--info_event-right_content {
+      padding-left: 20px; }
+      .event__container--info_event-right_content > p {
+        font-size: 1.3rem; }
   .third-section_upcoming-events {
-    border: 1px solid red;
     display: block; }
     .third-section_upcoming-events-card {
-      border: 1px solid red;
       width: 100%;
       height: 355px; }
       .third-section_upcoming-events-card--info_id {
         font-size: 1.25rem; }
+      .third-section_upcoming-events-card--info_event-left {
+        padding: 0px 20px; }
       .third-section_upcoming-events-card--info_event-right {
         border-left: .5px solid #fe9a8b;
         width: 50%;
@@ -759,4 +784,46 @@ body {
   .footer_con {
     width: 80%; }
     .footer_con--left-copyright {
-      font-size: .8rem; } }
+      font-size: .8rem; }
+  .title {
+    font-size: 3rem; }
+  .blob:nth-child(4) {
+    left: 270px;
+    width: 100px;
+    height: 100px;
+    top: 100px; }
+  .blob:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    left: 325px; } }
+
+@media screen and (max-width: 415px) {
+  .event {
+    width: 95%; }
+    .event__container--info_name-instagram > h5 {
+      font-size: 1.2rem;
+      margin-left: 0px; }
+    .event__container--info_name-instagram > h3 {
+      display: none; }
+    .event__container--info_id > h4 {
+      font-size: 1.2rem; }
+    .event__container--info_event-left {
+      padding-left: 20px; }
+      .event__container--info_event-left-h5 {
+        font-size: 1.1rem; }
+      .event__container--info_event-left-h2 {
+        font-size: 2.2rem; }
+        .event__container--info_event-left-h2_second {
+          font-size: 1.5rem; }
+        .event__container--info_event-left-h2_third {
+          font-size: 1.25rem; }
+    .event__container--info_event-right_content {
+      padding-left: 20px; }
+      .event__container--info_event-right_content > p {
+        font-size: 1.1rem; }
+  .team__cards-con {
+    transform: scale(0.9); }
+  .blob:nth-child(4) {
+    left: 220px; }
+  .blob:nth-child(3) {
+    left: 235px; } }
