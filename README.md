@@ -1,12 +1,12 @@
 
-<table>
 
+<table>
   <tr>
-    <th>Huron Indian Cultural Association</th>
+     <th><a href="https://abitsalihu.github.io/hica/">Huron Indian Cultural Association</a> </th>
   </tr>
   
   <tr>
-    <th> This website is made so people can find information when the next event is for Huron Indian Cultural Association</th>
+    <th>HICA is a website created to showcase the days when the events will happen as well as showcase the team behind HICA!</th>
   </tr>
-  
+
 </table>
